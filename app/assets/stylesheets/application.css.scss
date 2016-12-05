@@ -37,6 +37,17 @@ h1, h2, h3 {
     }
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border: 2px solid white;
+    &:hover, &:focus {
+        background-color: #485563;
+    }
+}
+
 // Background Gradient
 .navbar, .home-callout {
     // Gradient provided by @_ighosh at uiGradients.com
