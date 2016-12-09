@@ -1,8 +1,8 @@
 /* global $, Stripe */
 // Document ready
-$(document).on('turbolinks.load', function() {
+$(document).on('turbolinks:load', function() {
     var theForm = $('#pro_form');
-    var submitBtn = $('#form-submit-btn');
+    var submitBtn = $('#form-signup-btn');
     
     // Set Stripe public key
     Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
@@ -26,7 +26,7 @@ $(document).on('turbolinks.load', function() {
             alert('The credit card number appears to be invalid');
         }
         
-        if (!Stripe.card.validateCardNumber(cvcNum)) {
+        if (!Stripe.card.validateCVC(cvcNum)) {
             error = true;
             alert('The CVC number appears to be invalid');
         }
